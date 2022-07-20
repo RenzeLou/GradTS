@@ -1,0 +1,290 @@
+cola:
+  data_format: PremiseOnly
+  dropout_p: 0.05
+  enable_san: false
+  metric_meta:
+  - ACC
+  - MCC
+  loss: CeCriterion
+  kd_loss: MseCriterion
+  adv_loss: SymKlCriterion
+  n_class: 2
+  task_type: Classification
+mnli:
+  data_format: PremiseAndOneHypothesis
+  dropout_p: 0.1
+  enable_san: false 
+  labels:
+  - contradiction
+  - neutral
+  - entailment
+  metric_meta:
+  - ACC
+  loss: CeCriterion
+  kd_loss: MseCriterion
+  adv_loss: SymKlCriterion
+  n_class: 3
+  split_names:
+  - train
+  - matched_dev
+  - mismatched_dev
+  - matched_test
+  - mismatched_test
+  task_type: Classification
+mrpc:
+  data_format: PremiseAndOneHypothesis
+  enable_san: false 
+  metric_meta:
+  - ACC
+  - F1
+  loss: CeCriterion
+  kd_loss: MseCriterion
+  adv_loss: SymKlCriterion
+  n_class: 2
+  task_type: Classification
+qnli:
+  data_format: PremiseAndOneHypothesis
+  enable_san: false 
+  labels:
+  - not_entailment
+  - entailment
+  metric_meta:
+  - ACC
+  loss: CeCriterion
+  kd_loss: MseCriterion
+  adv_loss: SymKlCriterion
+  n_class: 2
+  task_type: Classification
+qqp:
+  data_format: PremiseAndOneHypothesis
+  enable_san: false 
+  metric_meta:
+  - ACC
+  - F1
+  loss: CeCriterion
+  kd_loss: MseCriterion
+  adv_loss: SymKlCriterion
+  n_class: 2
+  task_type: Classification
+rte:
+  data_format: PremiseAndOneHypothesis
+  enable_san: false
+  labels:
+  - not_entailment
+  - entailment
+  metric_meta:
+  - ACC
+  loss: CeCriterion
+  kd_loss: MseCriterion
+  adv_loss: SymKlCriterion
+  n_class: 2
+  task_type: Classification
+scitail:
+  data_format: PremiseAndOneHypothesis
+  enable_san: false
+  labels:
+  - neutral
+  - entails
+  metric_meta:
+  - ACC
+  loss: CeCriterion
+  kd_loss: MseCriterion
+  adv_loss: SymKlCriterion
+  n_class: 2
+  task_type: Classification
+snli:
+  data_format: PremiseAndOneHypothesis
+  enable_san: false
+  labels:
+  - contradiction
+  - neutral
+  - entailment
+  metric_meta:
+  - ACC
+  loss: CeCriterion
+  kd_loss: MseCriterion
+  adv_loss: SymKlCriterion
+  n_class: 3
+  task_type: Classification
+sst:
+  data_format: PremiseOnly
+  enable_san: false
+  metric_meta:
+  - ACC
+  loss: CeCriterion
+  kd_loss: MseCriterion
+  adv_loss: SymKlCriterion
+  n_class: 2
+  task_type: Classification
+stsb:
+  data_format: PremiseAndOneHypothesis
+  enable_san: false
+  metric_meta:
+  - Pearson
+  - Spearman
+  n_class: 1
+  loss: MseCriterion
+  kd_loss: MseCriterion
+  adv_loss: MseCriterion
+  task_type: Regression
+wnli:
+  data_format: PremiseAndOneHypothesis
+  enable_san: false 
+  metric_meta:
+  - ACC
+  loss: CeCriterion
+  kd_loss: MseCriterion
+  adv_loss: SymKlCriterion
+  n_class: 2
+  task_type: Classification
+meld:
+  data_format: PremiseOnly
+  dropout_p: 0.05
+  enable_san: false
+  metric_meta:
+  - F1MAC
+  - ACC
+  loss: CeCriterion
+  kd_loss: MseCriterion
+  adv_loss: SymKlCriterion
+  n_class: 7
+  task_type: Classification
+dmeld:
+  data_format: PremiseOnly
+  dropout_p: 0.05
+  enable_san: false
+  metric_meta:
+  - F1MAC
+  - ACC
+  loss: CeCriterion
+  kd_loss: MseCriterion
+  adv_loss: SymKlCriterion
+  n_class: 7
+  task_type: Classification
+ner:
+  data_format: Seqence
+  dropout_p: 0.3
+  enable_san: False
+  labels:
+  - O
+  - B-MISC
+  - I-MISC
+  - B-PER
+  - I-PER
+  - B-ORG
+  - I-ORG
+  - B-LOC
+  - I-LOC
+  - X
+  - CLS
+  - SEP
+  metric_meta:
+  - SeqEval
+  n_class: 11
+  loss: SeqCeCriterion
+  split_names:
+  - train
+  - dev
+  - test
+  task_type: SeqenceLabeling
+pos:
+  data_format: Seqence
+  dropout_p: 0.1
+  enable_san: False
+  labels:
+  - ','
+  - \
+  - ':'
+  - '.'
+  - "''"
+  - '"'
+  - (
+  - )
+  - $
+  - CC
+  - CD
+  - DT
+  - EX
+  - FW
+  - IN
+  - JJ
+  - JJR
+  - JJS
+  - LS
+  - MD
+  - NN
+  - NNP
+  - NNPS
+  - NNS
+  - NN|SYM
+  - PDT
+  - POS
+  - PRP
+  - PRP$
+  - RB
+  - RBR
+  - RBS
+  - RP
+  - SYM
+  - TO
+  - UH
+  - VB
+  - VBD
+  - VBG
+  - VBN
+  - VBP
+  - VBZ
+  - WDT
+  - WP
+  - WP$
+  - WRB
+  - X
+  - CLS
+  - SEP
+  metric_meta:
+  - SeqEval
+  n_class: 48
+  loss: SeqCeCriterion
+  split_names:
+  - train
+  - dev
+  - test
+  task_type: SeqenceLabeling
+sc:
+  data_format: Seqence
+  dropout_p: 0.1
+  enable_san: False
+  labels:
+  - B-ADJP
+  - B-ADVP
+  - B-CONJP
+  - B-INTJ
+  - B-LST
+  - B-NP
+  - B-PP
+  - B-PRT
+  - B-SBAR
+  - B-VP
+  - I-ADJP
+  - I-ADVP
+  - I-CONJP
+  - I-INTJ
+  - I-LST
+  - I-NP
+  - I-PP
+  - I-SBAR
+  - I-VP
+  - O
+  - X
+  - CLS
+  - SEP
+  metric_meta:
+  - SeqEval
+  n_class: 25
+  loss: SeqCeCriterion
+  split_names:
+  - train
+  - dev
+  - test
+  task_type: SeqenceLabeling
+

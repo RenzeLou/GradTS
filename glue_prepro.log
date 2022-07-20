@@ -1,0 +1,138 @@
+02/26/2021 10:54:48 Loaded 23596 SciTail train samples
+02/26/2021 10:54:48 Loaded 1304 SciTail dev samples
+02/26/2021 10:54:48 Loaded 2126 SciTail test samples
+02/26/2021 10:54:49 Loaded 549367 SNLI train samples
+02/26/2021 10:54:49 Loaded 9842 SNLI dev samples
+02/26/2021 10:54:49 Loaded 9824 SNLI test samples
+02/26/2021 10:54:51 Loaded 392702 MNLI train samples
+02/26/2021 10:54:51 Loaded 9815 MNLI matched dev samples
+02/26/2021 10:54:51 Loaded 9832 MNLI mismatched dev samples
+02/26/2021 10:54:51 Loaded 9796 MNLI matched test samples
+02/26/2021 10:54:51 Loaded 9847 MNLI mismatched test samples
+02/26/2021 10:54:51 Loaded 3668 MRPC train samples
+02/26/2021 10:54:51 Loaded 408 MRPC dev samples
+02/26/2021 10:54:51 Loaded 1725 MRPC test samples
+02/26/2021 10:54:51 Loaded 104743 QNLI train samples
+02/26/2021 10:54:51 Loaded 5463 QNLI dev samples
+02/26/2021 10:54:51 Loaded 5463 QNLI test samples
+02/26/2021 10:54:53 Loaded 363846 QQP train samples
+02/26/2021 10:54:53 Loaded 40430 QQP dev samples
+02/26/2021 10:54:53 Loaded 390965 QQP test samples
+02/26/2021 10:54:53 Loaded 2490 RTE train samples
+02/26/2021 10:54:53 Loaded 277 RTE dev samples
+02/26/2021 10:54:53 Loaded 3000 RTE test samples
+02/26/2021 10:54:53 Loaded 635 WNLI train samples
+02/26/2021 10:54:53 Loaded 71 WNLI dev samples
+02/26/2021 10:54:53 Loaded 146 WNLI test samples
+02/26/2021 10:54:53 Loaded 67349 SST train samples
+02/26/2021 10:54:53 Loaded 872 SST dev samples
+02/26/2021 10:54:53 Loaded 1821 SST test samples
+02/26/2021 10:54:53 Loaded 8551 COLA train samples
+02/26/2021 10:54:53 Loaded 1043 COLA dev samples
+02/26/2021 10:54:53 Loaded 1063 COLA test samples
+02/26/2021 10:54:53 Loaded 5749 STS-B train samples
+02/26/2021 10:54:53 Loaded 1500 STS-B dev samples
+02/26/2021 10:54:53 Loaded 1379 STS-B test samples
+02/26/2021 10:54:53 done with scitail
+02/26/2021 10:54:54 done with snli
+02/26/2021 10:54:55 done with mnli
+02/26/2021 10:54:55 done with mrpc
+02/26/2021 10:54:55 done with qnli
+02/26/2021 10:54:57 done with qqp
+02/26/2021 10:54:57 done with rte
+02/26/2021 10:54:57 done with wnli
+02/26/2021 10:54:57 done with sst
+02/26/2021 10:54:57 done with cola
+02/26/2021 10:54:57 done with stsb
+02/26/2021 11:01:14 Loaded 23596 SciTail train samples
+02/26/2021 11:01:14 Loaded 1304 SciTail dev samples
+02/26/2021 11:01:14 Loaded 2126 SciTail test samples
+02/26/2021 11:01:16 Loaded 549367 SNLI train samples
+02/26/2021 11:01:16 Loaded 9842 SNLI dev samples
+02/26/2021 11:01:16 Loaded 9824 SNLI test samples
+02/26/2021 11:01:18 Loaded 392702 MNLI train samples
+02/26/2021 11:01:18 Loaded 9815 MNLI matched dev samples
+02/26/2021 11:01:18 Loaded 9832 MNLI mismatched dev samples
+02/26/2021 11:01:18 Loaded 9796 MNLI matched test samples
+02/26/2021 11:01:18 Loaded 9847 MNLI mismatched test samples
+02/26/2021 11:01:18 Loaded 3668 MRPC train samples
+02/26/2021 11:01:18 Loaded 408 MRPC dev samples
+02/26/2021 11:01:18 Loaded 1725 MRPC test samples
+02/26/2021 11:01:18 Loaded 104743 QNLI train samples
+02/26/2021 11:01:18 Loaded 5463 QNLI dev samples
+02/26/2021 11:01:18 Loaded 5463 QNLI test samples
+02/26/2021 11:01:19 Loaded 363846 QQP train samples
+02/26/2021 11:01:19 Loaded 40430 QQP dev samples
+02/26/2021 11:01:19 Loaded 390965 QQP test samples
+02/26/2021 11:01:19 Loaded 2490 RTE train samples
+02/26/2021 11:01:19 Loaded 277 RTE dev samples
+02/26/2021 11:01:19 Loaded 3000 RTE test samples
+02/26/2021 11:01:19 Loaded 635 WNLI train samples
+02/26/2021 11:01:19 Loaded 71 WNLI dev samples
+02/26/2021 11:01:19 Loaded 146 WNLI test samples
+02/26/2021 11:01:19 Loaded 67349 SST train samples
+02/26/2021 11:01:19 Loaded 872 SST dev samples
+02/26/2021 11:01:19 Loaded 1821 SST test samples
+02/26/2021 11:01:19 Loaded 8551 COLA train samples
+02/26/2021 11:01:19 Loaded 1043 COLA dev samples
+02/26/2021 11:01:19 Loaded 1063 COLA test samples
+02/26/2021 11:01:19 Loaded 5749 STS-B train samples
+02/26/2021 11:01:19 Loaded 1500 STS-B dev samples
+02/26/2021 11:01:19 Loaded 1379 STS-B test samples
+02/26/2021 11:01:20 done with scitail
+02/26/2021 11:01:21 done with snli
+02/26/2021 11:01:23 done with mnli
+02/26/2021 11:01:23 done with mrpc
+02/26/2021 11:01:23 done with qnli
+02/26/2021 11:01:26 done with qqp
+02/26/2021 11:01:26 done with rte
+02/26/2021 11:01:26 done with wnli
+02/26/2021 11:01:26 done with sst
+02/26/2021 11:01:26 done with cola
+02/26/2021 11:01:26 done with stsb
+02/26/2021 11:02:50 Loaded 23596 SciTail train samples
+02/26/2021 11:02:50 Loaded 1304 SciTail dev samples
+02/26/2021 11:02:50 Loaded 2126 SciTail test samples
+02/26/2021 11:02:52 Loaded 549367 SNLI train samples
+02/26/2021 11:02:52 Loaded 9842 SNLI dev samples
+02/26/2021 11:02:52 Loaded 9824 SNLI test samples
+02/26/2021 11:02:53 Loaded 392702 MNLI train samples
+02/26/2021 11:02:53 Loaded 9815 MNLI matched dev samples
+02/26/2021 11:02:53 Loaded 9832 MNLI mismatched dev samples
+02/26/2021 11:02:53 Loaded 9796 MNLI matched test samples
+02/26/2021 11:02:53 Loaded 9847 MNLI mismatched test samples
+02/26/2021 11:02:53 Loaded 3668 MRPC train samples
+02/26/2021 11:02:53 Loaded 408 MRPC dev samples
+02/26/2021 11:02:53 Loaded 1725 MRPC test samples
+02/26/2021 11:02:54 Loaded 104743 QNLI train samples
+02/26/2021 11:02:54 Loaded 5463 QNLI dev samples
+02/26/2021 11:02:54 Loaded 5463 QNLI test samples
+02/26/2021 11:02:55 Loaded 363846 QQP train samples
+02/26/2021 11:02:55 Loaded 40430 QQP dev samples
+02/26/2021 11:02:55 Loaded 390965 QQP test samples
+02/26/2021 11:02:55 Loaded 2490 RTE train samples
+02/26/2021 11:02:55 Loaded 277 RTE dev samples
+02/26/2021 11:02:55 Loaded 3000 RTE test samples
+02/26/2021 11:02:55 Loaded 635 WNLI train samples
+02/26/2021 11:02:55 Loaded 71 WNLI dev samples
+02/26/2021 11:02:55 Loaded 146 WNLI test samples
+02/26/2021 11:02:55 Loaded 67349 SST train samples
+02/26/2021 11:02:55 Loaded 872 SST dev samples
+02/26/2021 11:02:55 Loaded 1821 SST test samples
+02/26/2021 11:02:55 Loaded 8551 COLA train samples
+02/26/2021 11:02:55 Loaded 1043 COLA dev samples
+02/26/2021 11:02:55 Loaded 1063 COLA test samples
+02/26/2021 11:02:55 Loaded 5749 STS-B train samples
+02/26/2021 11:02:55 Loaded 1500 STS-B dev samples
+02/26/2021 11:02:55 Loaded 1379 STS-B test samples
+02/26/2021 11:02:55 done with scitail
+02/26/2021 11:02:57 done with snli
+02/26/2021 11:02:59 done with mnli
+02/26/2021 11:02:59 done with mrpc
+02/26/2021 11:02:59 done with qnli
+02/26/2021 11:03:02 done with qqp
+02/26/2021 11:03:02 done with rte
+02/26/2021 11:03:02 done with wnli
+02/26/2021 11:03:02 done with sst
+02/26/2021 11:03:02 done with cola
+02/26/2021 11:03:02 done with stsb

@@ -1,0 +1,25 @@
+meld:
+  data_format: PremiseOnly
+  dropout_p: 0.05
+  enable_san: false
+  metric_meta:
+  - F1
+  - ACC
+  loss: CeCriterion
+  kd_loss: MseCriterion
+  adv_loss: SymKlCriterion
+  n_class: 7
+  task_type: Classification
+dmeld:
+  data_format: PremiseOnly
+  dropout_p: 0.05
+  enable_san: false
+  metric_meta:
+  - F1
+  - ACC
+  loss: CeCriterion
+  kd_loss: MseCriterion
+  adv_loss: SymKlCriterion
+  n_class: 7
+  task_type: Classification
+
