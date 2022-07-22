@@ -15,7 +15,7 @@ The main system requirements:
 
 We recommend the readers to use the same environment as us.
 
-```shell
+```bash
 conda create -n gradts python==3.6.5
 conda activate gradts
 sh ./scripts/setup_env.sh
