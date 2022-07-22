@@ -236,14 +236,17 @@ def main(args):
 
     task_defs = TaskDefs(args.task_def)
 
+    # print(task_defs.get_task_names())
+    # exit()
     for task in task_defs.get_task_names():
         task_def = task_defs.get_task_def(task)
         logger.info("Task %s" % task)
         for split_name in task_def.split_names:
             file_path = os.path.join(root, "%s_%s.tsv" % (task, split_name))
             if not os.path.exists(file_path):
-                logger.warning("File %s doesnot exit")
-                sys.exit(1)
+                logger.warning("File %s doesnot exit" % file_path)
+                # sys.exit(1)
+                break
             rows = load_data(file_path, task_def)
             dump_path = os.path.join(mt_dnn_root, "%s_%s.json" % (task, split_name))
             logger.info(dump_path)

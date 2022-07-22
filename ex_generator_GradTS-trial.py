@@ -1,12 +1,26 @@
-''' this script can be used to generate shell to run mtdnn with the task selection result of AutoSem & GradTS '''
+''' this script can load the gradient file for each task, and sort the order of auxiliary tasks
+all the auxiliary tasks will be added greedily
+'''
 import os
 import pickle
+import argparse
 
-task_list = ['cola','mrpc','sst','wnli','mnli','qnli','rte','qqp']  # 8 task  ## TODO
+parser = argparse.ArgumentParser()
+
+parser.add_argument('-T','--tasks',type=str,default='cola,mrpc,sst,wnli,mnli,qnli,rte,qqp')
+parser.add_argument('-B','--bert_model_type',type=str,default="bert-base-cased")
+parser.add_argument('-L','--labeled_data',type=str,default='ner,pos,meld,dmeld',
+                    help = 'There are only dev set for glue tasks. ' + 
+                    'If there is any task with labeled test data in your task list, make sure mention it.')
+args = parser.parse_args()
+
+task_list = [t.strip() for t in args.tasks.split(',')]
+labeled_data = [t.strip() for t in args.labeled_data.split(',')]
+# task_list = ['cola','mrpc','sst','wnli','mnli','qnli','rte','qqp']  # 8 task  ## TODO
 # task_list = ['cola', 'mrpc', 'sst', 'wnli', 'rte', 'qnli']  # 6 task
 # task_list = ['cola', 'mrpc', 'sst', 'wnli', 'mnli', 'qnli', 'rte', 'qqp', 'meld', 'dmeld']  # 10 task
 # task_list = ['cola', 'mrpc', 'sst', 'wnli', 'mnli', 'qnli', 'rte', 'qqp', 'stsb', 'pos', 'ner', 'sc']  # 12 task
-labeled_data = ['ner', 'pos', 'meld', 'dmeld']  ## TODO: assume sc only has test data
+# labeled_data = ['ner', 'pos', 'meld', 'dmeld']  ## TODO: assume sc only has test data
 method_dict = {1: "GradTS-thres", 2: "GradTS-trial", 3: "GradTS-fg"}
 
 # set args
@@ -14,7 +28,7 @@ method = 2  # 1,2,3
 task_threshold = 0.9  ## useless
 instance_threshold = 0.62  ## useless
 # trial_num = 1
-bert_model_type = "bert-large-cased"  # bert-base-cased,bert-base-uncased,roberta-base,bert-large-uncased,roberta-large,bert-base-cased,bert-large-cased  ## TODO
+bert_model_type = args.bert_model_type  # bert-base-cased,bert-base-uncased,roberta-base,bert-large-uncased,roberta-large,bert-base-cased,bert-large-cased  ## TODO
 gradient_path = "./gradient_files/{}".format(bert_model_type)
 # output_dir = "./checkpoints/{}/{}".format(bert_model_type, method_dict[method])
 output_dir = "./checkpoints/{}/{}".format(str(len(task_list)) + "_" + bert_model_type, method_dict[method])
@@ -36,7 +50,7 @@ template += 'BATCH_SIZE=$1\ngpu=$2\nEpoch=$3\n'
 template += 'ENCODER_TYPE={}\n'.format(encoder_type)
 template += "NUM_LAYER={}\n".format(num_layer)
 template += "DATA_DIR={}\n".format(data_dir)
-template += 'echo "export CUDA_VISIBLE_DEVICES=${gpu}"\necho "epoch num=${Epoch}"\nexport CUDA_VISIBLE_DEVICES=${gpu}\ntstr=$(date +"%FT%H%M")\n'
+template += 'echo "export CUDA_VISIBLE_DEVICES=$gpu"\necho "epoch num=$Epoch"\nexport CUDA_VISIBLE_DEVICES=${gpu}\ntstr=$(date +"%FT%H%M")\n'
 # template += 'MODEL_ROOT="checkpoints"\nBERT_PATH="{}"\nDATA_DIR="data/canonical_data/{}"\n'.format(model, model)
 template += 'answer_opt=1\noptim="adamax"\ngrad_clipping=0\nglobal_grad_clipping=1\nlr="{}"\ngrad_accumulation_step=4\n\n'.format(
     lr)
