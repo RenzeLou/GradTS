@@ -21,7 +21,7 @@ conda activate gradts
 sh setup_env.sh
 ```
 
-### 2. Datases & Processing
+### 2. Datasets & Processing
 
 Run the following script to download and process datasets for 8 glue tasks. 
 
@@ -38,7 +38,7 @@ sh setup_tok.sh
 Besides the glue tasks, you can use any other task (e.g., pos, ner). But make sure that you:
 
 - Add task definition under the `experiments/`, it should be a `.yml` file that is similar to `glue_task_def.yml`.
-- Process your datasets to   `.json` files, which is similar to `data/canonical_data/bert-base-cased/cola_train.json`.
+- Process your datasets to   `.json` files, which are similar to `data/canonical_data/bert-base-cased/cola_train.json`.
 
 ## Quick Start
 
