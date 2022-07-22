@@ -2,3 +2,4 @@
 !.gitignore
 !.gitkeep
 __pycache__
+*.log
