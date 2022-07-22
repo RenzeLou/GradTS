@@ -1,6 +1,6 @@
-# GradTS: A Gradient-Based Automatic Auxiliary Task Selection Method Based on Transformer Networks.
+# GradTS: A Gradient-Based Automatic Auxiliary Task Selection Method Based on Transformer Networks
 
-The source code for [GradTS](https://aclanthology.org/2021.emnlp-main.455/) (appeared in EMNLP 2021), where most of the resources in this repository are based on [mt-dnn](https://github.com/namisan/mt-dnn).
+The source code for [GradTS](https://aclanthology.org/2021.emnlp-main.455/) (appeared in EMNLP 2021), where most of the resources in this repository are based on [MT-DNN](https://github.com/namisan/mt-dnn).
 
 The main system requirements:
 
@@ -29,7 +29,7 @@ Run the following script to download and process datasets for 8 glue tasks.
 sh setup_data.sh
 ```
 
-Then, run this script to tokenize all the datasets.
+After that, run this script to tokenize all the datasets.
 
 ```shell
 sh setup_tok.sh
@@ -46,11 +46,12 @@ Various encoders are used in our experiments (e.g., bert, roberta). Here, we set
 
 ### 1. Correlation
 
-To fine-tune PLM and get head importance matrices, run the following commands. Herein, the first and second parameters (i.e., 0, 4) represent the **GPU number** and **training batch size**, respectively. Change them according to your infrastructure.
+To fine-tune PLM and get the head importance matrices, run the following commands.
+ <!-- Herein, the first and second parameters (i.e., 0, 4) represent the **GPU number** and **training batch size**, respectively. Change them according to your infrastructure. -->
 
 ```shell
-sh tune_task_level_bert-base-cased.sh 0 4
-sh tune_ins_level_bert-base-cased.sh 0 4
+sh tune_task_level_bert-base-cased.sh 0 4 # GPU, training batch size 
+sh tune_ins_level_bert-base-cased.sh 0 4 # GPU, training batch size 
 ```
 
 Then, use this script to get the task- and instance-level correlation.
@@ -68,7 +69,7 @@ python ex_generator_GradTS-trial.py -T mnli,rte,qqp,qnli,mrpc,sst,cola,wnli -B b
 sh GradTS-trial_8_bert-base-cased.sh 4 0 7  # training batch size, GPU, epoch
 ```
 
-Then, run the following script.
+Next, run the following script.
 
 ```shell
 python read_trial_results.py -T mnli,rte,qqp,qnli,mrpc,sst,cola,wnli -B bert-base-cased
