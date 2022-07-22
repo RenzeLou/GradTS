@@ -18,7 +18,7 @@ We recommend the readers to use the same environment as us.
 ```shell
 conda create -n gradts python==3.6.5
 conda activate gradts
-sh setup_env.sh
+sh ./scripts/setup_env.sh
 ```
 
 ### 2. Datases & Processing
@@ -26,13 +26,13 @@ sh setup_env.sh
 Run the following script to download and process datasets for 8 glue tasks. 
 
 ```shell
-sh setup_data.sh
+sh ./scripts/setup_data.sh
 ```
 
 Then, run this script to tokenize all the datasets.
 
 ```shell
-sh setup_tok.sh
+sh ./scripts/setup_tok.sh
 ```
 
 Besides the glue tasks, you can use any other task (e.g., pos, ner). But make sure that you:
@@ -49,8 +49,8 @@ Various encoders are used in our experiments (e.g., bert, roberta). Here, we set
 To fine-tune PLM and get head importance matrices, run the following commands. Herein, the first and second parameters (i.e., 0, 4) represent the **GPU number** and **training batch size**, respectively. Change them according to your infrastructure.
 
 ```shell
-sh tune_task_level_bert-base-cased.sh 0 4
-sh tune_ins_level_bert-base-cased.sh 0 4
+sh ./scripts/tune_task_level_bert-base-cased.sh 0 4
+sh ./scripts/tune_ins_level_bert-base-cased.sh 0 4
 ```
 
 Then, use this script to get the task- and instance-level correlation.
@@ -64,7 +64,7 @@ python calculate_corr.py --bert_model_type bert-base-cased --task_list mnli,rte,
 For task-level trial-based selection (i.e., GradTS-trial), utilize these two commands below. 
 
 ```shell
-python ex_generator_GradTS-trial.py -T mnli,rte,qqp,qnli,mrpc,sst,cola,wnli -B bert-base-cased
+python ./scripts_gen/ex_generator_GradTS-trial.py -T mnli,rte,qqp,qnli,mrpc,sst,cola,wnli -B bert-base-cased
 sh GradTS-trial_8_bert-base-cased.sh 4 0 7  # training batch size, GPU, epoch
 ```
 
@@ -81,7 +81,7 @@ You can find the selection results and the best performance in `checkpoints/8_be
 For instance-level selection (i.e., GradTS-fg), run these scripts.
 
 ```shell
-python ex_generator_GradTS-fg.py -T mnli,rte,qqp,qnli,mrpc,sst,cola,wnli -B bert-base-cased --thres 0.62
+python ./scripts_gen/ex_generator_GradTS-fg.py -T mnli,rte,qqp,qnli,mrpc,sst,cola,wnli -B bert-base-cased --thres 0.62
 sh GradTS-fg_8_bert-base-cased_0.62.sh 4 0 7  # training batch size, GPU, epoch
 ```
 
