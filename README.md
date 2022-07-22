@@ -18,7 +18,7 @@ We recommend the readers to use the same environment as us.
 ```bash
 conda create -n gradts python==3.6.5
 conda activate gradts
-sh ./scripts/setup_env.sh
+sh setup_env.sh
 ```
 
 ### 2. Datases & Processing
@@ -26,13 +26,13 @@ sh ./scripts/setup_env.sh
 Run the following script to download and process datasets for 8 glue tasks. 
 
 ```shell
-sh ./scripts/setup_data.sh
+sh setup_data.sh
 ```
 
 Then, run this script to tokenize all the datasets.
 
 ```shell
-sh ./scripts/setup_tok.sh
+sh setup_tok.sh
 ```
 
 Besides the glue tasks, you can use any other task (e.g., pos, ner). But make sure that you:
